@@ -34,6 +34,15 @@ main {
   margin: 0 auto;
 } */
 
+.residents {
+  padding: 8px;
+  float: right;
+  background-color: #ddd;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
 header h1 {
   text-align: center;
 }
