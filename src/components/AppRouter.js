@@ -7,9 +7,18 @@ import EpisodeList from "./EpisodeList";
 export default function AppRouter() {
   return (
     <div>
-      <Route path="/characters" component={CharacterList} />
-      <Route path="/locations" component={LocationList} />
-      <Route path="/episodes" component={EpisodeList} />
+      <Route
+        path="/characters/:page"
+        render={props => <CharacterList {...props} />}
+      />
+      <Route
+        path="/locations/:page"
+        render={props => <LocationList {...props} />}
+      />
+      <Route
+        path="/episodes/:page"
+        render={props => <EpisodeList {...props} />}
+      />
     </div>
   );
 }

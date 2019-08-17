@@ -65,3 +65,20 @@ main {
 header h1 {
   text-align: center;
 }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer a {
+  border: 1px solid #ccc;
+  padding: 15px 30px;
+  margin: 20px;
+  border-radius: 8px;
+  background-color: #e5e5e5;
+}
+
+footer a:hover {
+  color: dodgerblue;
+  background-color: #f1f1f1;
+}
