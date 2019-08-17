@@ -43,6 +43,25 @@ main {
   font-size: 0.9rem;
   margin-top: 15px;
 }
+
+.tab-container {
+  margin: 25px 20px;
+}
+
+.tablink {
+  padding: 15px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-right: 5px;
+  color: lightgrey;
+}
+
+.tablink.active {
+  box-shadow: 0px -4px 4px #ccc;
+  font-weight: bold;
+  color: dodgerblue;
+}
+
 header h1 {
   text-align: center;
 }

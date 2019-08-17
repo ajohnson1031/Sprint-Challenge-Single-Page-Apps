@@ -10,7 +10,7 @@ export default function CharacterList() {
 
   useEffect(() => {
     axios
-      .get("https://rickandmortyapi.com/api/character/")
+      .get("https://rick-api.herokuapp.com/api/character")
       .then(res => {
         console.log(res);
         setCharacters(res.data.results);

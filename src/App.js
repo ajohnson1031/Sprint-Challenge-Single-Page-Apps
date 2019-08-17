@@ -1,18 +1,16 @@
 import React from "react";
-// import TabNav from "./components/TabNav.js";
+import TabNav from "./components/TabNav.js";
 // import Header from "./components/Header.js";
-// import AppRouter from "./components/AppRouter.js";
-import CharacterList from "./components/CharacterList";
-import LocationList from "./components/LocationsList";
+import AppRouter from "./components/AppRouter.js";
+
 import "semantic-ui-css/semantic.min.css";
 
 export default function App() {
   return (
     <main>
-      {/* <Header />
+      {/* <Header />*/}
       <TabNav />
-      <AppRouter /> */}
-      <LocationList />
+      <AppRouter />{" "}
     </main>
   );
 }

@@ -7,13 +7,12 @@ export default function LocationsList() {
   const [next, setNext] = useState();
   const [prev, setPrev] = useState();
   useEffect(() => {
-    axios.get("https://rickandmortyapi.com/api/location/").then(res => {
-      console.log(res);
+    axios.get("https://rick-api.herokuapp.com/api/location").then(res => {
       setLocations(res.data.results);
       setNext(res.data.info.next);
       setPrev(res.data.info.prev);
     });
-  });
+  }, []);
 
   return (
     <section className="location-list grid-view">
