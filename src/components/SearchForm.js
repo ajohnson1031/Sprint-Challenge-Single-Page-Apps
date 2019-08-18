@@ -4,18 +4,12 @@ import axios from "axios";
 export default function SearchForm({ place }) {
   // TODO: Add stateful logic for query/form data
   const [name, setName] = useState("");
-  const currURL = window.location.href;
   const [apiCall, setApiCall] = useState("");
 
   const onSearch = (e, name, setApiCall) => {
     e.preventDefault();
 
-    if (currURL.includes("characters"))
-      setApiCall(`https://rickandmortyapi.com/api/character/?name=${name}`);
-    else if (currURL.includes("locations"))
-      setApiCall(`https://rickandmortyapi.com/api/location/?name=${name}`);
-    else if (currURL.includes("episodes"))
-      setApiCall(`https://rickandmortyapi.com/api/episode/?name=${name}`);
+    setApiCall(`https://rickandmortyapi.com/api/${place}/?name=${name}`);
   };
 
   useEffect(() => {
