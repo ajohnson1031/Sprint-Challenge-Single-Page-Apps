@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function SearchForm() {
+export default function SearchForm({ place }) {
   // TODO: Add stateful logic for query/form data
   const [name, setName] = useState("");
   const currURL = window.location.href;
   const [apiCall, setApiCall] = useState("");
-  const [place, setPlace] = useState();
 
   const onSearch = (e, name, setApiCall) => {
     e.preventDefault();
@@ -22,14 +21,6 @@ export default function SearchForm() {
   useEffect(() => {
     apiCall !== "" && axios.get(apiCall).then(res => console.log(res));
   }, [apiCall]);
-
-  useEffect(() => {
-    currURL.includes("characters")
-      ? setPlace("character")
-      : currURL.includes("locations")
-      ? setPlace("location")
-      : setPlace("episode");
-  }, [place]);
 
   const handleInputChange = e => {
     setName(e.target.value);

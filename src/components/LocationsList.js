@@ -21,7 +21,7 @@ export default function LocationsList(props) {
 
   return (
     <div>
-      <SearchForm />
+      <SearchForm place="location" />
       <section className="location-list grid-view">
         {locations &&
           locations.map((loc, i) => <LocationCard location={loc} key={i} />)}

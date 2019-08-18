@@ -23,7 +23,7 @@ export default function EpisodeList(props) {
 
   return (
     <div>
-      <SearchForm />
+      <SearchForm place="episode" />
       <section className="location-list grid-view">
         {episodes &&
           episodes.map((episode, i) => <EpisodeCard ep={episode} key={i} />)}
