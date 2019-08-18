@@ -6,6 +6,9 @@ import { NavLink } from "react-router-dom";
 export default function TabNav() {
   return (
     <div className="tab-container">
+      <NavLink exact to="/" className="tablink">
+        Home
+      </NavLink>
       <NavLink to="/characters/1" className="tablink">
         Characters
       </NavLink>

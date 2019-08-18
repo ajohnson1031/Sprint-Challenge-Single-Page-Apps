@@ -3,6 +3,7 @@ import EpisodeCard from "./EpisodeCard";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { Icon } from "semantic-ui-react";
+import SearchForm from "./SearchForm";
 
 export default function EpisodeList(props) {
   const [episodes, setEpisodes] = useState();
@@ -22,15 +23,16 @@ export default function EpisodeList(props) {
 
   return (
     <div>
+      <SearchForm />
       <section className="location-list grid-view">
         {episodes &&
           episodes.map((episode, i) => <EpisodeCard ep={episode} key={i} />)}
       </section>
       <footer>
-        <NavLink to={prev[prev.length - 1]}>
+        <NavLink to={prev && prev[prev.length - 1]}>
           <Icon name="backward" /> Back
         </NavLink>
-        <NavLink to={next[next.length - 1]}>
+        <NavLink to={next && next[next.length - 1]}>
           Next <Icon name="forward" />
         </NavLink>
       </footer>

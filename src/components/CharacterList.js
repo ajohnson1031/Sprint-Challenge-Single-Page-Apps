@@ -3,6 +3,7 @@ import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import { NavLink } from "react-router-dom";
 import { Icon } from "semantic-ui-react";
+import SearchForm from "./SearchForm";
 
 export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
@@ -26,15 +27,16 @@ export default function CharacterList(props) {
 
   return (
     <div>
+      <SearchForm />
       <section className="character-list grid-view">
         {characters &&
           characters.map((c, i) => <CharacterCard char={c} key={i} />)}
       </section>
       <footer>
-        <NavLink to={prev[prev.length - 1]}>
+        <NavLink to={prev && prev[prev.length - 1]}>
           <Icon name="backward" /> Back
         </NavLink>
-        <NavLink to={next[next.length - 1]}>
+        <NavLink to={next && next[next.length - 1]}>
           Next <Icon name="forward" />
         </NavLink>
       </footer>

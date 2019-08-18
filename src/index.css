@@ -45,7 +45,7 @@ main {
 }
 
 .tab-container {
-  margin: 25px 20px;
+  margin: 50px 20px 40px;
 }
 
 .tablink {
@@ -81,4 +81,42 @@ footer a {
 footer a:hover {
   color: dodgerblue;
   background-color: #f1f1f1;
+}
+
+.search-form {
+  margin: 25px 20px;
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 40px);
+}
+
+.search-form form {
+  width: inherit;
+}
+
+.search-form form input {
+  padding: 12px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid #ccc;
+  border-right: none;
+  width: calc(100% - 125px);
+  outline: none;
+}
+
+.search-form form button {
+  padding: 12px;
+  border: 1px solid dodgerblue;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 125px;
+  background-color: dodgerblue;
+  font-weight: bold;
+  color: white;
+  outline: none;
+}
+
+.search-form form button:hover {
+  background-color: lightskyblue;
+  border-color: lightskyblue;
 }
