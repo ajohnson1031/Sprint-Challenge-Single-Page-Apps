@@ -27,7 +27,12 @@ export default function CharacterList(props) {
 
   return (
     <div>
-      <SearchForm place="character" />
+      <SearchForm
+        place="character"
+        setCharacters={setCharacters}
+        setNext={setNext}
+        page={props.match.params.page}
+      />
       <section className="character-list grid-view">
         {characters &&
           characters.map((c, i) => <CharacterCard char={c} key={i} />)}

@@ -21,7 +21,12 @@ export default function LocationsList(props) {
 
   return (
     <div>
-      <SearchForm place="location" />
+      <SearchForm
+        place="location"
+        setLocations={setLocations}
+        setNext={setNext}
+        setPrev={setPrev}
+      />
       <section className="location-list grid-view">
         {locations &&
           locations.map((loc, i) => <LocationCard location={loc} key={i} />)}
