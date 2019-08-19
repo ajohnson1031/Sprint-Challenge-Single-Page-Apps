@@ -23,7 +23,7 @@ export default function CharacterList(props) {
       .catch(err => console.log(err));
     // TODO: Add AJAX/API Request here - must run in `useEffect`
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  }, [props.match.params.page]);
+  }, [props.match.params.page, next, prev]);
 
   return (
     <div>
