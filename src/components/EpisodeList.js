@@ -12,7 +12,7 @@ export default function EpisodeList(props) {
   useEffect(() => {
     const page = props.match.params.page;
     axios
-      .get(`https://rick-api.herokuapp.com/api/episode/?page=${page}`)
+      .get(`https://rickandmortyapi.com/api/episode/?page=${page}`)
       .then(res => {
         setEpisodes(res.data.results);
         setNext(res.data.info.next);

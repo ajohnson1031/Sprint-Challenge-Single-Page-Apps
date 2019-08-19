@@ -11,7 +11,7 @@ export default function LocationsList(props) {
   useEffect(() => {
     const page = props.match.params.page;
     axios
-      .get(`https://rick-api.herokuapp.com/api/location/?page=${page}`)
+      .get(`https://rickandmortyapi.com/api/location/?page=${page}`)
       .then(res => {
         setLocations(res.data.results);
         setNext(res.data.info.next);

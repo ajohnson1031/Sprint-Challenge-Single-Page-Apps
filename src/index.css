@@ -71,16 +71,16 @@ footer {
   justify-content: space-between;
 }
 footer a {
-  border: 1px solid #ccc;
+  border: 1px solid #f5f5f5;
   padding: 15px 30px;
   margin: 20px;
   border-radius: 8px;
-  background-color: #e5e5e5;
+  background-color: #fff;
 }
 
 footer a:hover {
   color: dodgerblue;
-  background-color: #f1f1f1;
+  background-color: #fefefe;
 }
 
 .search-form {
@@ -119,4 +119,14 @@ footer a:hover {
 .search-form form button:hover {
   background-color: lightskyblue;
   border-color: lightskyblue;
+}
+
+.search-results-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  top: 0;
+  left: 0;
 }

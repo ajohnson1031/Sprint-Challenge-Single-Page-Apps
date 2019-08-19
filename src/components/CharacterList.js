@@ -14,7 +14,7 @@ export default function CharacterList(props) {
   useEffect(() => {
     const page = props.match.params.page;
     axios
-      .get(`https://rick-api.herokuapp.com/api/character/?page=${page}`)
+      .get(`https://rickandmortyapi.com/api/character/?page=${page}`)
       .then(res => {
         setCharacters(res.data.results);
         setNext(res.data.info.next);
