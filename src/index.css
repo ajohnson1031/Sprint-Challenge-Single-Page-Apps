@@ -34,6 +34,99 @@ main {
   margin: 0 auto;
 } */
 
+.residents {
+  padding: 8px;
+  float: right;
+  background-color: #ddd;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.tab-container {
+  margin: 50px 20px 40px;
+}
+
+.tablink {
+  padding: 15px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin-right: 5px;
+  color: lightgrey;
+}
+
+.tablink.active {
+  box-shadow: 0px -4px 4px #ccc;
+  font-weight: bold;
+  color: dodgerblue;
+}
+
 header h1 {
   text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer a {
+  border: 1px solid #f5f5f5;
+  padding: 15px 30px;
+  margin: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+footer a:hover {
+  color: dodgerblue;
+  background-color: #fefefe;
+}
+
+.search-form {
+  margin: 25px 20px;
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 40px);
+}
+
+.search-form form {
+  width: inherit;
+}
+
+.search-form form input {
+  padding: 12px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: 1px solid #ccc;
+  border-right: none;
+  width: calc(100% - 125px);
+  outline: none;
+}
+
+.search-form form button {
+  padding: 12px;
+  border: 1px solid dodgerblue;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  width: 125px;
+  background-color: dodgerblue;
+  font-weight: bold;
+  color: white;
+  outline: none;
+}
+
+.search-form form button:hover {
+  background-color: lightskyblue;
+  border-color: lightskyblue;
+}
+
+.search-results-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+  top: 0;
+  left: 0;
 }
